@@ -1,0 +1,12 @@
+kubectl get namespaces   #list all namespaces
+kubectl get all -n <namespace>   #see all object in a namespace called namespace
+kubectl delete all --all -n <namespace>  # delet all objects in namespace
+kubectl delete namespace <namespace>   # delete namespace called namespace
+kubectl create namespace gdash   #creat namespace gdash
+
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts    # Not namespace specific
+helm repo update   # Not namespace specific either. cuserwide
+helm install kps prometheus-community/kube-prometheus-stack -n gdash --create-namespace   #A namespace need to be specified
+
+Debugging Helm install errors in namespace.
+kubectl get events -n <namespace> --sort-by=.metadata.creationTimestamp

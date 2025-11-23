@@ -1,0 +1,32 @@
+gcloud container cluster get-credentials sre - -region us-central1-a
+aws eks --region <region> update-kubeconfig --name <cluster-name> : aws eks --region us-east-1 update-kubeconfig --name sre
+The context specifies which cluster your kubectl command runs against.
+kccc = kubectl config current-context 
+Kcdc = kubectl config delete-context
+kcgc = kubectl config get-contexts
+Kcsc = kubectl config set-context - -current - -namespace
+kcsc = kubectl config set-context 
+kcuc = kubectl config use-context 
+
+Kgns = Kubectl get ns : outputs all namespaces
+Kgns - -show-labels
+kubectl get deployment : looks for the deployment in the default ns. The namespace must be specified like
+kubectl get deployment -n ecp
+
+kcn = kubectl config set-context - -current –namespace
+kcn ecp : makes the ecp namespace default; useful if working extensivly in the namespace.
+
+#Help Youselves
+Kubectl version
+kubectl cluster-info
+kubectl --help
+
+#Kubectl GET- the most used command
+kgd = kubectl get deployment
+kgp =kubectl get pods
+kgs = kubectl get services
+kgd --all-namespaces \ wc
+kgd --all-namespaces
+
+alias k=kubectl
+
