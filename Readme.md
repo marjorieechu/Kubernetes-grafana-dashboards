@@ -1,4 +1,4 @@
-kind get clusters
+<!-- kind get clusters
 kubectl config get-contexts  # Check cluster already in Kubeconfig
 kubectl config current-context
 kubectl config use-context kind-marjcluster
@@ -49,4 +49,4 @@ Click Copy JSON to Clipboard or Save to File.
 Store in your repo under monitoring/dashboards/.
 
 Option B — Fetch JSON from ConfigMaps (pre-provisioned dashboards)
-kube-prometheus-stack stores dashboards as ConfigMaps. You can get them with kubectl.
+kube-prometheus-stack stores dashboards as ConfigMaps. You can get them with kubectl. -->
